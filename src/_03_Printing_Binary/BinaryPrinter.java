@@ -20,4 +20,7 @@ public class BinaryPrinter {
 	public void printLongBinary(long l) {
 		
 	}
+	public static void main(String[] args) {
+	
+	}
 }
