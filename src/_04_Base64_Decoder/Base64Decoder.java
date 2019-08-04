@@ -67,7 +67,8 @@ public class Base64Decoder {
 				//byte ab = (Integer.toBinaryString(s.charAt((convertBase64Char(s.charAt(i+1))))));
 				
 				//System.out.println("B" + ab);
-				secondByte = (byte)(secondByte<<4);System.out.println(secondByte);
+				secondByte = (byte)(secondByte<<6);System.out.println(secondByte);
+				secondByte = (byte) (secondByte&(1<<24)-1);System.out.println(secondByte);
 				byte secondByteShifted = (byte)Integer.parseInt(String.format("%8s", (Integer.toBinaryString(secondByte).replace(' ', '0'))));
 	
 				System.out.println("second byte " + Integer.toBinaryString(secondByte));
